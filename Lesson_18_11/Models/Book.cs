@@ -14,12 +14,18 @@ namespace Lesson_18_11.Models
         public string Genre { get; set; }
         public int Year { get; set; }
 
+        public Book() { }
         public Book(string a, string t, string g, int y)
         {
             Author = a;
             Title = t;
             Genre = g; 
             Year = y;
+        }
+
+        public override string ToString()
+        {
+            return $"Title: {Title}, Author: {Author} Year: {Year} Genre: {Genre}";
         }
     }
 }
